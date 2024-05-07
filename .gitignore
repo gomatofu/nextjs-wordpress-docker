@@ -1,0 +1,2 @@
+# Ignore the db_data directory
+mysql/db_data
