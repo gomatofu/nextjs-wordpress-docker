@@ -11,7 +11,7 @@ services:
       MYSQL_USER: wp_user # WordPress用データベース接続ユーザ名
       MYSQL_PASSWORD: password # WordPress用データベース接続パスワード
 
-  WordPress:
+  wordpress:
     depends_on:
       - db
     image: wordpress:latest
@@ -31,7 +31,7 @@ services:
   app:
     build:
       context: ./nextjs-app
-      dockerfile: Dockerfile
+      dockerfile: ../Dockerfiles/nextjs/Dockerfile
     volumes:
       - ./nextjs-app:/app
     environment:
